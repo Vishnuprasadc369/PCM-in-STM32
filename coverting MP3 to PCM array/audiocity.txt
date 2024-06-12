@@ -1,0 +1,26 @@
+Method 1: Using Audacity
+Step-by-Step Instructions
+Install Audacity:
+
+Download and install Audacity from audacityteam.org.
+Open the Audio File:
+
+Launch Audacity.
+Go to File > Open and select your "Hello World" WAV file.
+Convert to Mono (if needed):
+
+If your audio file is stereo and you need a mono output, convert it by selecting Tracks > Mix > Mix Stereo Down to Mono.
+Set the Sample Rate:
+
+At the bottom left corner of the Audacity window, find the "Project Rate (Hz)" dropdown and set it to 8000 Hz. This ensures the sample rate is compatible with typical microcontroller playback scenarios.
+Export as 8-bit PCM:
+
+Go to File > Export > Export Audio.
+In the "Save as type" dropdown, select Other uncompressed files.
+Click Options and set:
+Header to RAW (header-less).
+Encoding to Unsigned 8-bit PCM.
+Choose a filename and save location, then click Save.
+Extract Raw Data:
+
+The exported file is now a raw 8-bit PCM audio file with no header. You can use a hex editor or another script to read this file as an array of bytes.
